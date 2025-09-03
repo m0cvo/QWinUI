@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "QWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "QWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
