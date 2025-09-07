@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,17 @@ namespace QWinUI
             this.Close();
         }
 
-        
+        void MyImage_Loaded(object sender, RoutedEventArgs e)
+        {
+            Image? img = sender as Image;
+            BitmapImage bitmapImage = new BitmapImage();
+            img.Width= bitmapImage.DecodePixelWidth = 200; //natural px width of image source
+                                                           // don't need to set Height, system maintains aspect ratio, and calculates the other
+                                                           // dimension, so long as one dimension measurement is provided
+            bitmapImage.UriSource = new Uri(img.BaseUri, "Assets/Images/Mogpie.jpg");
+            img.Source = bitmapImage;
+        }
+
+
     }
 }

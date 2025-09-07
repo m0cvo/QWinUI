@@ -14,11 +14,7 @@
     </Window.SystemBackdrop>
 
     <Grid Margin="10">
-        <Image Height="100">
-            <Image.Source>
-                <BitmapImage UriSource="/Assets/Images/Mogpie.jpg" DecodePixelHeight="100" />
-            </Image.Source>
-        </Image>
+        <Image x:Name="MyImage" />
         <Button x:Name="ExitBtn" Background="LightBlue" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20" Click="ExitBtn_Click">Exit</Button>
         <!--<Canvas Background="Blue" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Width="400" Height="200">
         </Canvas>-->
