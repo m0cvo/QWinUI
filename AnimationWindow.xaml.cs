@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -10,6 +5,11 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -21,28 +21,19 @@ namespace QWinUI
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class AnimationWindow : Window
     {
-        public MainWindow()
+        public AnimationWindow()
         {
             InitializeComponent();
-        }
-
-        private void MyButton_Click(object sender, RoutedEventArgs e)
-        {
-            string text = "Hello my friend you clicked me!";
-            MyButton.Content = text;
-        }
-
-        private void PageBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MyPage myPage = new MyPage();
-            myPage.Activate();
+            
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }

@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window
-    x:Class="QWinUI.MainWindow"
+    x:Class="QWinUI.AnimationWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:QWinUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="QWinUI">
+    Title="AnimationWindow">
 
     <Window.SystemBackdrop>
         <MicaBackdrop />
     </Window.SystemBackdrop>
 
-    <Grid>
-        <Button x:Name="MyButton" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="15" Click="MyButton_Click">Click me!</Button>
-        <Button x:Name="PageBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,60,15,0" Click="PageBtn_Click">Go to Next Page</Button>
+    <Grid Margin="10">
+        <Image Height="100">
+            <Image.Source>
+                <BitmapImage UriSource="/Assets/Images/Mogpie.jpg" DecodePixelHeight="100" />
+            </Image.Source>
+        </Image>
         <Button x:Name="ExitBtn" Background="LightBlue" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20" Click="ExitBtn_Click">Exit</Button>
+        <!--<Canvas Background="Blue" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Width="400" Height="200">
+        </Canvas>-->
+        
     </Grid>
 </Window>
-
